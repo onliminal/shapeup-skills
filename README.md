@@ -13,6 +13,10 @@ The skill walks you through four phases:
 3. **De-risk** — Stress-test the concept for rabbit holes, unknowns, and scope bombs
 4. **Pitch** — Synthesize everything into a decision document for the build phase
 
+And an optional upstream phase:
+
+0. **Explore** — For product-level ideas that aren't yet a specific feature or problem. Map the problem space, find the people, understand the landscape, and identify the sharpest wedge to pursue. Output: candidate problems ready for framing.
+
 Each phase produces a markdown artifact in your project's `shaping/` directory. The skill tracks progress via YAML frontmatter, so you can resume across sessions.
 
 ## Install
@@ -38,6 +42,7 @@ The skill triggers automatically when you mention shaping, framing, pitching, ap
 Or start at a specific phase:
 
 ```
+I have a product idea I want to explore
 Frame this problem for me
 Help me shape a solution
 De-risk this concept
@@ -52,6 +57,7 @@ The skill detects prior work in `shaping/` and picks up where you left off.
 shapeup/
 ├── SKILL.md                    # Entrypoint — routing logic and core behavior
 ├── references/
+│   ├── explore.md              # Explore conversation protocol
 │   ├── frame.md                # Framing conversation protocol
 │   ├── shape.md                # Shaping conversation protocol
 │   ├── derisking.md            # De-risking conversation protocol
@@ -67,6 +73,7 @@ Artifacts are written to `shaping/{project-slug}/` in your project root:
 ```
 shaping/
 └── invoice-autopay/
+    ├── explore.md              # Problem space, people, wedges (optional)
     ├── frame.md                # Problem, appetite, success criteria
     ├── shape.md                # Elements, boundaries, flow
     ├── risks.md                # Rabbit holes, patches, cut order
