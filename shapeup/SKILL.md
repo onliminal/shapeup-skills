@@ -10,7 +10,9 @@ A facilitator protocol for structured product planning using the Shape Up method
 
 ## Methodology Overview
 
-[Shape Up](https://basecamp.com/shapeup) (created by Ryan Singer at Basecamp) treats product development as a pipeline:
+[Shape Up](https://basecamp.com/shapeup) (created by Ryan Singer at Basecamp) treats product development as a pipeline. This skill extends it with an optional upstream phase for early-stage product ideas:
+
+0. **Explore** *(optional)* — For product-level ideas that aren't yet a specific feature or problem. Map the problem space, find the people, understand the landscape, and identify the sharpest wedge to pursue. Output: candidate problems ready for framing.
 
 1. **Frame** — Challenge the raw idea. Define the real problem, who it affects, and whether the business has appetite to solve it. Output: a well-framed problem worth shaping.
 
@@ -20,7 +22,7 @@ A facilitator protocol for structured product planning using the Shape Up method
 
 4. **Pitch** — Synthesize everything into a document that communicates the bet: problem, appetite, solution, rabbit holes, and no-gos. Output: a pitch/kickoff document.
 
-These phases are sequential but not rigid. You can loop back from de-risking to reshaping, or start at any phase if earlier work is already done.
+These phases are sequential but not rigid. You can loop back from de-risking to reshaping, skip Explore if you already have a specific problem, or start at any phase if earlier work is already done.
 
 ## How It Works
 
@@ -28,7 +30,8 @@ These phases are sequential but not rigid. You can loop back from de-risking to 
 
 When a user invokes this skill, determine which phase they need:
 
-- **No prior work exists**: Start with Framing. Read `${CLAUDE_SKILL_DIR}/references/frame.md`.
+- **User has a raw product idea** (not a specific feature or problem): Start with Explore. Read `${CLAUDE_SKILL_DIR}/references/explore.md`.
+- **No prior work exists but the problem is specific**: Start with Framing. Read `${CLAUDE_SKILL_DIR}/references/frame.md`.
 - **A framed problem exists** (check `shaping/` directory): Move to Shaping. Read `${CLAUDE_SKILL_DIR}/references/shape.md`.
 - **A shaped concept exists**: Move to De-risking. Read `${CLAUDE_SKILL_DIR}/references/derisking.md`.
 - **De-risked concept exists**: Move to Pitch. Read `${CLAUDE_SKILL_DIR}/references/pitch.md`.
@@ -39,6 +42,7 @@ If a `shaping/` directory exists in the project, check for prior work:
 ```
 shaping/
 └── {project-slug}/
+    ├── explore.md      ← Explore output (problem space, people, wedges) — optional
     ├── frame.md        ← Framing output (problem, appetite, context)
     ├── shape.md        ← Shaping output (elements, boundaries, flow)
     ├── risks.md        ← De-risking output (rabbit holes, patches, unknowns)
@@ -75,6 +79,7 @@ When starting a new project, ask the user for a short project slug (e.g., `dot-g
 
 Read the appropriate reference file before beginning a phase:
 
+- **Explore**: `${CLAUDE_SKILL_DIR}/references/explore.md`
 - **Framing**: `${CLAUDE_SKILL_DIR}/references/frame.md`
 - **Shaping**: `${CLAUDE_SKILL_DIR}/references/shape.md`
 - **De-risking**: `${CLAUDE_SKILL_DIR}/references/derisking.md`
