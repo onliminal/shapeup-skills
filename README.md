@@ -1,8 +1,8 @@
-# Shape Up Skill for Claude Code
+# Shape Up Skills
 
-A [Claude Code skill](https://code.claude.com/docs/en/skills) that guides you through the [Shape Up](https://basecamp.com/shapeup) product planning methodology. Instead of generating documents, it conducts structured conversations that pull information out of your head, challenge your assumptions, and produce clear artifacts.
+An [agent skill](https://agentskills.io/home) that guides you through the [Shape Up](https://basecamp.com/shapeup) product planning methodology. Instead of generating documents, it conducts structured conversations that pull information out of your head, challenge your assumptions, and produce clear artifacts.
 
-Works for solo builders and teams alike.
+Works with any [compatible agent](https://agentskills.io/home) and for solo builders and teams alike.
 
 ## What it does
 
@@ -21,25 +21,45 @@ Each phase produces a markdown artifact in your project's `shaping/` directory. 
 
 ## Install
 
-Copy or symlink the `shapeup/` directory into your Claude Code skills location:
+Copy or symlink the `shapeup/` directory into your agent's skills location. The exact path depends on the agent — see [Agent Skills compatibility](https://agentskills.io/home) for agent-specific docs.
+
+### Claude Code
 
 ```bash
-# Personal (available across all your projects)
+# Personal (available across all projects)
 cp -r shapeup ~/.claude/skills/shapeup
 
 # Project-specific
 cp -r shapeup .claude/skills/shapeup
 ```
 
+See the [Claude Code skills documentation](https://code.claude.com/docs/en/skills) for more details.
+
+### Codex CLI
+
+```bash
+cp -r shapeup ~/.codex/skills/shapeup
+```
+
+See the [Agent Skills specification](https://agentskills.io/specification) for the standard skill format.
+
+### OpenCode
+
+Clone the repo into the OpenCode skills directory:
+
+```bash
+git clone https://github.com/colemccormick/shapeup-skills.git ~/.opencode/skills/shapeup-skills
+```
+
+OpenCode auto-discovers all `SKILL.md` files under `~/.opencode/skills/`. No config changes needed — restart OpenCode to activate.
+
+### Other agents
+
+Any agent that supports the [Agent Skills format](https://agentskills.io/specification) (Cursor, Gemini CLI, VS Code Copilot, Goose, Roo Code, etc.) can use this skill — consult your agent's documentation for the skills directory path.
+
 ## Usage
 
-The skill triggers automatically when you mention shaping, framing, pitching, appetite, or related concepts. You can also invoke it directly:
-
-```
-/shapeup
-```
-
-Or start at a specific phase:
+The skill triggers automatically when you mention shaping, framing, pitching, appetite, or related concepts. You can also start at a specific phase:
 
 ```
 I have a product idea I want to explore

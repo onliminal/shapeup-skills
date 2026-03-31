@@ -1,6 +1,6 @@
-# Claude Shape Up Skill
+# Shape Up Skills
 
-A Claude Code skill for structured product planning using the Basecamp Shape Up methodology.
+An [Agent Skill](https://agentskills.io) for structured product planning using the Basecamp Shape Up methodology.
 
 ## Installation
 
@@ -20,23 +20,25 @@ cp -r shapeup .claude/skills/shapeup
 shapeup/                        # Skill directory — this is what gets installed
 ├── SKILL.md                    # Entrypoint (skill definition + routing logic)
 ├── references/
+│   ├── explore.md              # Explore conversation protocol
 │   ├── frame.md                # Framing phase conversation protocol
 │   ├── shape.md                # Shaping phase conversation protocol
-│   └── derisking.md            # De-risking phase conversation protocol
+│   ├── derisking.md            # De-risking phase conversation protocol
+│   └── pitch.md                # Pitch assembly protocol
 └── templates/
     └── pitch.md                # Pitch output template with YAML frontmatter
 ```
 
 ## How the Skill Works
 
-The skill turns Claude into a structured interviewer that guides users through four sequential phases:
+The skill turns the agent into a structured interviewer that guides users through four sequential phases:
 
 1. **Frame** — Interrogate the problem (not the solution). Push for specifics, stories, appetite.
 2. **Shape** — Collaboratively find solution elements at fat-marker fidelity. Breadboard flows, set boundaries.
 3. **De-risk** — Adversarially stress-test the concept for rabbit holes, unknowns, and scope bombs.
 4. **Pitch** — Synthesize everything into a single betting document.
 
-The core behavioral rule: ask one question at a time, don't generate artifacts until the conversation is complete. Claude is an interviewer, not a document generator.
+The core behavioral rule: ask one question at a time, don't generate artifacts until the conversation is complete. The agent is an interviewer, not a document generator.
 
 ## Key Design Decisions
 
@@ -49,7 +51,7 @@ The core behavioral rule: ask one question at a time, don't generate artifacts u
 
 ## Editing Guidelines
 
-- Reference docs (references/*.md) are conversation protocols, not templates. They define how Claude should behave in each phase.
+- Reference docs (references/*.md) are conversation protocols, not templates. They define how the agent should behave in each phase.
 - templates/pitch.md is the only template file — it defines the output format for the final artifact.
 - SKILL.md ties everything together and should stay in sync with the reference docs if phase structure changes.
 - All file references in SKILL.md use `${CLAUDE_SKILL_DIR}` — keep this convention when adding new files.
