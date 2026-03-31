@@ -1,0 +1,16 @@
+{
+  "name": "shapeup-skills",
+  "owner": {
+    "name": "Coleman"
+  },
+  "metadata": {
+    "description": "Shape Up product planning skills for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "shapeup",
+      "source": "./",
+      "description": "Structured product planning using the Shape Up methodology"
+    }
+  ]
+}

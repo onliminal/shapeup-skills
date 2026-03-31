@@ -21,16 +21,30 @@ Each phase produces a markdown artifact in your project's `shaping/` directory. 
 
 ## Install
 
-Copy or symlink the `shapeup/` directory into your agent's skills location. The exact path depends on the agent — see [Agent Skills compatibility](https://agentskills.io/home) for agent-specific docs.
+### Claude Code plugin (recommended)
 
-### Claude Code
+```bash
+# Add the marketplace and install
+/plugin marketplace add onliminal/shapeup-skills
+/plugin install shapeup@shapeup-skills
+```
+
+Or test locally:
+
+```bash
+claude --plugin-dir ./path/to/shapeup-skills
+```
+
+### Claude Code standalone skill
+
+Copy or symlink the skill directory:
 
 ```bash
 # Personal (available across all projects)
-cp -r shapeup ~/.claude/skills/shapeup
+cp -r skills/shapeup ~/.claude/skills/shapeup
 
 # Project-specific
-cp -r shapeup .claude/skills/shapeup
+cp -r skills/shapeup .claude/skills/shapeup
 ```
 
 See the [Claude Code skills documentation](https://code.claude.com/docs/en/skills) for more details.
@@ -38,7 +52,7 @@ See the [Claude Code skills documentation](https://code.claude.com/docs/en/skill
 ### Codex CLI
 
 ```bash
-cp -r shapeup ~/.codex/skills/shapeup
+cp -r skills/shapeup ~/.codex/skills/shapeup
 ```
 
 See the [Agent Skills specification](https://agentskills.io/specification) for the standard skill format.
@@ -48,7 +62,7 @@ See the [Agent Skills specification](https://agentskills.io/specification) for t
 Clone the repo into the OpenCode skills directory:
 
 ```bash
-git clone https://github.com/colemccormick/shapeup-skills.git ~/.opencode/skills/shapeup-skills
+git clone https://github.com/onliminal/shapeup-skills.git ~/.opencode/skills/shapeup-skills
 ```
 
 OpenCode auto-discovers all `SKILL.md` files under `~/.opencode/skills/`. No config changes needed — restart OpenCode to activate.
@@ -71,19 +85,26 @@ Write a pitch
 
 The skill detects prior work in `shaping/` and picks up where you left off.
 
-## Skill structure
+## Project structure
 
 ```
-shapeup/
-├── SKILL.md                    # Entrypoint — routing logic and core behavior
-├── references/
-│   ├── explore.md              # Explore conversation protocol
-│   ├── frame.md                # Framing conversation protocol
-│   ├── shape.md                # Shaping conversation protocol
-│   ├── derisking.md            # De-risking conversation protocol
-│   └── pitch.md                # Pitch assembly protocol
-└── templates/
-    └── pitch.md                # Output template for the final pitch document
+shapeup-skills/                     # Plugin root
+├── .claude-plugin/
+│   ├── plugin.json                 # Plugin manifest
+│   └── marketplace.json            # Marketplace catalog
+├── skills/
+│   └── shapeup/                    # Skill directory
+│       ├── SKILL.md                # Entrypoint — routing logic and core behavior
+│       ├── references/
+│       │   ├── explore.md          # Explore conversation protocol
+│       │   ├── frame.md            # Framing conversation protocol
+│       │   ├── shape.md            # Shaping conversation protocol
+│       │   ├── derisking.md        # De-risking conversation protocol
+│       │   └── pitch.md            # Pitch assembly protocol
+│       └── templates/
+│           └── pitch.md            # Output template for the final pitch document
+├── CLAUDE.md
+└── README.md
 ```
 
 ## Output

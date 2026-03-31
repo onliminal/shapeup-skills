@@ -4,29 +4,46 @@ An [Agent Skill](https://agentskills.io) for structured product planning using t
 
 ## Installation
 
-Copy or symlink the `shapeup/` directory into your skills location:
+### As a plugin (recommended)
+
+```bash
+# Add the marketplace and install
+/plugin marketplace add onliminal/shapeup-skills
+/plugin install shapeup@shapeup-skills
+```
+
+### Manual (standalone skill)
+
+Copy or symlink the skill directory:
 
 ```bash
 # Personal (available across all projects)
-cp -r shapeup ~/.claude/skills/shapeup
+cp -r skills/shapeup ~/.claude/skills/shapeup
 
 # Or project-specific
-cp -r shapeup .claude/skills/shapeup
+cp -r skills/shapeup .claude/skills/shapeup
 ```
 
 ## Project Structure
 
 ```
-shapeup/                        # Skill directory — this is what gets installed
-├── SKILL.md                    # Entrypoint (skill definition + routing logic)
-├── references/
-│   ├── explore.md              # Explore conversation protocol
-│   ├── frame.md                # Framing phase conversation protocol
-│   ├── shape.md                # Shaping phase conversation protocol
-│   ├── derisking.md            # De-risking phase conversation protocol
-│   └── pitch.md                # Pitch assembly protocol
-└── templates/
-    └── pitch.md                # Pitch output template with YAML frontmatter
+shapeup-skills/                     # Plugin root
+├── .claude-plugin/
+│   ├── plugin.json                 # Plugin manifest
+│   └── marketplace.json            # Marketplace catalog
+├── skills/
+│   └── shapeup/                    # Skill directory
+│       ├── SKILL.md                # Entrypoint (skill definition + routing logic)
+│       ├── references/
+│       │   ├── explore.md          # Explore conversation protocol
+│       │   ├── frame.md            # Framing phase conversation protocol
+│       │   ├── shape.md            # Shaping phase conversation protocol
+│       │   ├── derisking.md        # De-risking phase conversation protocol
+│       │   └── pitch.md            # Pitch assembly protocol
+│       └── templates/
+│           └── pitch.md            # Pitch output template with YAML frontmatter
+├── CLAUDE.md
+└── README.md
 ```
 
 ## How the Skill Works

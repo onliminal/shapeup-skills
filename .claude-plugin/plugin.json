@@ -1,0 +1,10 @@
+{
+  "name": "shapeup",
+  "description": "Structured product planning using the Shape Up methodology",
+  "version": "1.0.0",
+  "author": {
+    "name": "Coleman"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/onliminal/shapeup-skills"
+}
