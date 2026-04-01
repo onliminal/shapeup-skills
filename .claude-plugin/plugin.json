@@ -3,7 +3,8 @@
   "description": "Structured product planning using the Shape Up methodology",
   "version": "1.0.0",
   "author": {
-    "name": "Coleman"
+    "name": "Coleman McCormick",
+    "url": "https://onliminal.xyz"
   },
   "license": "MIT",
   "repository": "https://github.com/onliminal/shapeup-skills"
