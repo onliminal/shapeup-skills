@@ -131,8 +131,8 @@ Framing is done when you have clear, specific answers to all of the above and th
 
 ```markdown
 ---
-status: complete
-phase: frame
+status: Complete
+phase: Frame
 created: {date}
 updated: {date}
 ---

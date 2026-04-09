@@ -176,8 +176,8 @@ Then:
 
 ```markdown
 ---
-status: complete
-phase: shape
+status: Complete
+phase: Shape
 created: {date}
 updated: {date}
 ---

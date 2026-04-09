@@ -142,8 +142,8 @@ Then:
 
 ```markdown
 ---
-status: complete
-phase: derisking
+status: Complete
+phase: Derisking
 created: {date}
 updated: {date}
 ---
