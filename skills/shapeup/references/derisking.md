@@ -174,6 +174,12 @@ updated: {date}
 ## Biggest Risk
 {The single most likely failure mode and the plan to address it}
 
+## Open Questions
+- {Unresolved risk, dependency, or boundary question}
+
+## Next Best Question
+{The single most useful question to answer next before or during pitch assembly}
+
 ---
 
 ## Conversation Log

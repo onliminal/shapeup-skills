@@ -222,6 +222,12 @@ updated: {date}
 ## Recommendation
 {Move to Frame / Run another test / Return to Explore / Stop}
 
+## Open Questions
+- {Unresolved uncertainty that still matters}
+
+## Next Best Question
+{The single most useful question to answer next to advance or conclude the evidence work}
+
 ---
 
 ## Conversation Log

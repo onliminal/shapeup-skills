@@ -264,6 +264,12 @@ updated: {date}
 ## Commitment Level
 {How much the user is willing to invest in exploring further}
 
+## Open Questions
+- {Unresolved question about the market, people, problem space, or wedge choice}
+
+## Next Best Question
+{The single most useful question to answer next if this project resumes}
+
 ---
 
 ## Conversation Log

@@ -29,6 +29,7 @@ Key writing principles:
 - **Show the solution at fat-marker fidelity.** Include breadboards or element descriptions from the shaping phase. Don't add detail beyond what was shaped.
 - **Be specific about rabbit holes.** Don't just list risks — state the patch or boundary for each one.
 - **Make no-gos explicit.** Things you're NOT doing are as important as things you are.
+- **Preserve resumability.** Carry forward the latest open questions and identify the single next-best question so future work has a clear starting point.
 
 ### 2. Review with the user
 
@@ -56,6 +57,7 @@ Since this pitch doubles as a project kickoff document, add a section at the end
 - **Starting point**: Where does a builder begin? Which element first?
 - **Suggested scope hammer sequence**: If time runs short, what to cut and in what order (pulled from the de-risking priority list)
 - **Open questions for builders**: Decisions deliberately left to the build phase (UI details, implementation approach, etc.)
+- **Next best question**: The first unresolved question a builder or team lead should answer to get moving cleanly
 
 ## When the pitch is complete
 
@@ -74,3 +76,4 @@ Before calling it done, verify:
 - [ ] No-gos are listed
 - [ ] A builder could read this and know where to start
 - [ ] Kickoff context is included (starting point, cut order, open questions)
+- [ ] Open questions and a next-best question are explicit

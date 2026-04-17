@@ -206,6 +206,12 @@ updated: {date}
 ### Out of Scope
 - {What we're explicitly not building, and why}
 
+## Open Questions
+- {Unresolved design, flow, or scope question}
+
+## Next Best Question
+{The single most useful question to answer next before or during de-risking}
+
 ---
 
 ## Conversation Log

@@ -74,3 +74,14 @@ If time runs short, cut in this order (bottom up):
 
 - {Question 1}
 - {Question 2}
+
+## Open Questions
+
+{Any unresolved questions that still matter at kickoff. These may overlap with builder-owned questions, but should be visible as the active uncertainties in the project.}
+
+- {Open question 1}
+- {Open question 2}
+
+## Next Best Question
+
+{The single most useful unresolved question to answer next so the team can move forward cleanly.}

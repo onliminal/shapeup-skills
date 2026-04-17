@@ -194,6 +194,12 @@ updated: {date}
 ## Success Criteria
 {What "good enough" looks like given the appetite}
 
+## Open Questions
+- {Unresolved question that shaping will need to respect or clarify}
+
+## Next Best Question
+{The single most useful question to answer next as the work moves into shaping}
+
 ---
 
 ## Conversation Log
