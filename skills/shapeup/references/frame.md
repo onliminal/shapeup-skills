@@ -20,6 +20,30 @@ The user typically arrives with one of:
 
 Your first job is to find the **problem underneath the request**.
 
+If the user is arriving from Explore, your first job is to make sure the conversation is ready to converge on one wedge rather than keep branching.
+
+## Explore -> Frame intake check
+
+At the start of Framing, run this quick test.
+
+Proceed with Frame when all of these are true:
+- One wedge has been consciously selected from Explore, even if alternatives remain documented
+- The problem can be stated as a specific pain for a specific person or situation
+- The current workaround or incumbent is understood well enough to ground the pain
+- The user is ready to discuss urgency and appetite for this one problem
+- The other candidate wedges can be set aside for now without confusion
+
+Go back to Explore if any of these are true:
+- The user is still comparing multiple wedges and hasn't actually chosen one
+- The "problem" is still a broad space, theme, or solution concept
+- The affected people are still vague or shifting
+- The current workaround or market landscape is still unclear
+- Each answer keeps opening new branches instead of sharpening the same problem
+
+If the intake check fails, say:
+
+> "We don't have a frameable problem yet. We're still exploring the territory, so let's step back and keep mapping before we narrow."
+
 ## Question flow
 
 These aren't a rigid script. Use judgment about ordering and skip questions whose answers are already clear from context. But don't skip the hard ones.
@@ -46,6 +70,7 @@ Push for **specifics**:
 - If the user says "users want X" → ask "Which users? Can you name one? What were they doing?"
 - If the user describes a solution → say "That sounds like a solution. Let's back up — what's the problem it solves?"
 - If the problem is abstract → ask "Can you give me a specific moment where this went wrong?"
+- If the problem keeps branching into multiple different pains or user types → say "We're mixing multiple wedges together. Which single problem are we framing right now?"
 
 ### 3. Who's affected
 

@@ -182,6 +182,28 @@ Then:
 
 If multiple candidate problems emerged, note them all. The user may want to frame each one separately and compare.
 
+## Explore -> Frame handoff test
+
+Before moving on, run this quick test.
+
+Stay in Explore if any of these are still true:
+- You're still branching across multiple distinct people, problem areas, or market angles and haven't consciously chosen one
+- The user's "problem" still sounds like a solution idea, category, or theme rather than a specific pain in a specific situation
+- The current landscape is still fuzzy: you don't yet understand the workaround, incumbent, or competing approaches well enough
+- The candidate wedges are weak, indistinguishable, or still being discovered
+- The user is still deciding whether this space is worth entering at all
+
+Move to Frame when all of these are true:
+- One wedge has been consciously selected from the explored options
+- You can state the problem as a specific pain for a specific person or situation
+- You understand how that person deals with it today
+- There is enough conviction or urgency to ask "why now?" and "how much is this worth?"
+- The user is ready to stop expanding the option set and start narrowing to one problem
+
+If the user tries to frame too early, say:
+
+> "We have a few promising directions, but we haven't chosen the problem yet. Let's stay in Explore long enough to make that choice consciously."
+
 ## Explore artifact format
 
 ```markdown
