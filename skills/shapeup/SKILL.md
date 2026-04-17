@@ -1,6 +1,6 @@
 ---
 name: shapeup
-description: Guide product planning using Shape Up — frame problems, shape solutions, de-risk, and write pitches. Use when planning features or turning raw ideas into buildable concepts.
+description: Guide product planning using Shape Up — explore ideas, gather evidence, frame problems, shape solutions, de-risk, and write pitches. Use when planning features or turning raw ideas into buildable concepts.
 argument-hint: "[idea or project-slug]"
 ---
 
@@ -10,19 +10,16 @@ A facilitator protocol for structured product planning using the Shape Up method
 
 ## Methodology Overview
 
-[Shape Up](https://basecamp.com/shapeup) (created by Ryan Singer at Basecamp) treats product development as a pipeline. This skill extends it with an optional upstream phase for early-stage product ideas:
+[Shape Up](https://basecamp.com/shapeup) (created by Ryan Singer at Basecamp) treats product development as a pipeline. This skill extends it with optional upstream phases for early-stage ideas and uncertain wedges:
 
-0. **Explore** *(optional)* — The divergent upstream phase for product-level ideas that aren't yet a specific feature or problem. Map the problem space broadly, find the people, understand the landscape, and surface multiple candidate wedges before framing converges on one. Output: candidate problems ready for framing.
+- **Explore** *(optional)* — The divergent upstream phase for product-level ideas that aren't yet a specific feature or problem. Map the problem space broadly, find the people, understand the landscape, and surface multiple candidate wedges before narrowing. Output: candidate problems ready for evidence-gathering or framing.
+- **Evidence** *(optional)* — The lightweight testing lane between Explore and Frame. Run interviews, smoke tests, concierge tests, fake doors, or other cheap experiments to reduce the sharpest uncertainty before committing appetite. Output: evidence and a decision about whether to frame, keep testing, re-explore, or stop.
+- **Frame** — Challenge the raw idea. Define the real problem, who it affects, and whether the business has appetite to solve it. Output: a well-framed problem worth shaping.
+- **Shape** — Find the elements of a solution at the right level of abstraction: rough enough to leave room for builders, but solved enough to be buildable. Set hard boundaries on what's in and out. Output: elements, boundaries, and a concept.
+- **De-risk** — Stress-test the concept. Find rabbit holes, technical unknowns, and scope bombs before committing to a build cycle. Output: a de-risked concept with patches.
+- **Pitch** — Synthesize everything into a document that communicates the bet: problem, appetite, solution, rabbit holes, and no-gos. Output: a pitch/kickoff document.
 
-1. **Frame** — Challenge the raw idea. Define the real problem, who it affects, and whether the business has appetite to solve it. Output: a well-framed problem worth shaping.
-
-2. **Shape** — Find the elements of a solution at the right level of abstraction: rough enough to leave room for builders, but solved enough to be buildable. Set hard boundaries on what's in and out. Output: elements, boundaries, and a concept.
-
-3. **De-risk** — Stress-test the concept. Find rabbit holes, technical unknowns, and scope bombs before committing to a build cycle. Output: a de-risked concept with patches.
-
-4. **Pitch** — Synthesize everything into a document that communicates the bet: problem, appetite, solution, rabbit holes, and no-gos. Output: a pitch/kickoff document.
-
-These phases are sequential but not rigid. You can loop back from de-risking to reshaping, skip Explore if you already have a specific problem, or start at any phase if earlier work is already done.
+These phases are sequential but not rigid. You can skip Explore if you already have a specific problem, use Evidence when a promising wedge still needs real-world signal, loop back from framing to evidence or explore if the problem isn't grounded enough, or start at any phase if earlier work is already done.
 
 ## How It Works
 
@@ -31,7 +28,10 @@ These phases are sequential but not rigid. You can loop back from de-risking to 
 When a user invokes this skill, determine which phase they need:
 
 - **User has a raw product idea** (not a specific feature or problem): Start with Explore. Read `${CLAUDE_SKILL_DIR}/references/explore.md`.
-- **No prior work exists but the problem is specific**: Start with Framing. Read `${CLAUDE_SKILL_DIR}/references/frame.md`.
+- **User has a promising wedge but wants interviews, smoke tests, concierge tests, fake-door validation, or other lightweight evidence before committing**: Start with Evidence. Read `${CLAUDE_SKILL_DIR}/references/evidence.md`.
+- **An explored idea exists but the chosen wedge still isn't grounded enough to deserve appetite**: Move to Evidence. Read `${CLAUDE_SKILL_DIR}/references/evidence.md`.
+- **No prior work exists but the problem is specific and already grounded enough to discuss urgency and appetite**: Start with Framing. Read `${CLAUDE_SKILL_DIR}/references/frame.md`.
+- **Evidence exists and points to a specific problem worth betting on**: Move to Framing. Read `${CLAUDE_SKILL_DIR}/references/frame.md`.
 - **A framed problem exists** (check `shaping/` directory): Move to Shaping. Read `${CLAUDE_SKILL_DIR}/references/shape.md`.
 - **A shaped concept exists**: Move to De-risking. Read `${CLAUDE_SKILL_DIR}/references/derisking.md`.
 - **De-risked concept exists**: Move to Pitch. Read `${CLAUDE_SKILL_DIR}/references/pitch.md`.
@@ -43,6 +43,7 @@ If a `shaping/` directory exists in the project, check for prior work:
 shaping/
 └── {project-slug}/
     ├── explore.md      ← Explore output (problem space, people, wedges) — optional
+    ├── evidence.md     ← Evidence output (tests, signals, decision) — optional
     ├── frame.md        ← Framing output (problem, appetite, context)
     ├── shape.md        ← Shaping output (elements, boundaries, flow)
     ├── risks.md        ← De-risking output (rabbit holes, patches, unknowns)
@@ -52,6 +53,7 @@ shaping/
 Each file contains YAML frontmatter with `status: in-progress | complete`. Use these to build a progress checklist at the start of each session:
 
 - [ ] Explore *(optional — skip if the problem is already specific)*
+- [ ] Evidence *(optional — use when a promising wedge still needs real-world signal)*
 - [ ] Frame
 - [ ] Shape
 - [ ] De-risk

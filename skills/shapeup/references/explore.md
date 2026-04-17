@@ -182,7 +182,7 @@ Then:
 
 If multiple candidate problems emerged, note them all. The user may want to frame each one separately and compare.
 
-## Explore -> Frame handoff test
+## Explore exit test
 
 Before moving on, run this quick test.
 
@@ -193,16 +193,26 @@ Stay in Explore if any of these are still true:
 - The candidate wedges are weak, indistinguishable, or still being discovered
 - The user is still deciding whether this space is worth entering at all
 
+Move to Evidence when all of these are true:
+- One wedge or a very short list of wedges looks promising enough to test
+- A key uncertainty still blocks commitment to framing
+- That uncertainty can be reduced with a cheap, real-world test
+- The user wants more signal before committing appetite to the problem
+
 Move to Frame when all of these are true:
 - One wedge has been consciously selected from the explored options
 - You can state the problem as a specific pain for a specific person or situation
 - You understand how that person deals with it today
-- There is enough conviction or urgency to ask "why now?" and "how much is this worth?"
+- There is already enough grounding from direct knowledge or lightweight evidence to ask "why now?" and "how much is this worth?"
 - The user is ready to stop expanding the option set and start narrowing to one problem
 
 If the user tries to frame too early, say:
 
 > "We have a few promising directions, but we haven't chosen the problem yet. Let's stay in Explore long enough to make that choice consciously."
+
+If the user has chosen a wedge but needs signal before framing, say:
+
+> "This looks promising, but not grounded enough to deserve appetite yet. Let's step into Evidence and run the lightest test that would make framing feel earned."
 
 ## Explore artifact format
 

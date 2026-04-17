@@ -1,6 +1,6 @@
 # Framing — Conversation Protocol
 
-Framing is the first and most critical phase. It exists to prevent the most common product planning failure: spending time shaping and building a solution before the problem is properly understood and the business has committed appetite to it.
+Framing is the first core Shape Up phase and the most critical convergence phase. It exists to prevent the most common product planning failure: spending time shaping and building a solution before the problem is properly understood and the business has committed appetite to it.
 
 Framing is NOT about solutions. It is about the problem, the people affected, the business context, and how much time and effort this is worth. If the user starts describing solutions, note them for later and redirect to the problem.
 
@@ -20,18 +20,25 @@ The user typically arrives with one of:
 
 Your first job is to find the **problem underneath the request**.
 
-If the user is arriving from Explore, your first job is to make sure the conversation is ready to converge on one wedge rather than keep branching.
+If the user is arriving from Explore or Evidence, your first job is to make sure the conversation is ready to converge on one wedge rather than keep branching or keep testing.
 
-## Explore -> Frame intake check
+## Explore/Evidence -> Frame intake check
 
 At the start of Framing, run this quick test.
 
 Proceed with Frame when all of these are true:
-- One wedge has been consciously selected from Explore, even if alternatives remain documented
+- One wedge has been consciously selected, even if alternatives remain documented
 - The problem can be stated as a specific pain for a specific person or situation
 - The current workaround or incumbent is understood well enough to ground the pain
+- The problem is grounded in direct knowledge, user evidence, or other credible signal rather than pure hypothesis
 - The user is ready to discuss urgency and appetite for this one problem
 - The other candidate wedges can be set aside for now without confusion
+
+Go to Evidence if any of these are true:
+- One wedge is selected, but the pain, urgency, or willingness to change still feels hypothetical
+- The user keeps saying "we should probably talk to users first" or "we need a quick test before we commit"
+- A lightweight interview, smoke test, concierge test, fake door, or data pull would materially change whether this deserves appetite
+- The discussion is blocked on an unanswered assumption rather than on problem definition
 
 Go back to Explore if any of these are true:
 - The user is still comparing multiple wedges and hasn't actually chosen one
@@ -43,6 +50,10 @@ Go back to Explore if any of these are true:
 If the intake check fails, say:
 
 > "We don't have a frameable problem yet. We're still exploring the territory, so let's step back and keep mapping before we narrow."
+
+If the issue is lack of grounding rather than too much breadth, say:
+
+> "We have a candidate problem, but not enough signal yet to commit appetite. Let's step into Evidence and run the lightest test that would make framing feel justified."
 
 ## Question flow
 
@@ -71,6 +82,7 @@ Push for **specifics**:
 - If the user describes a solution → say "That sounds like a solution. Let's back up — what's the problem it solves?"
 - If the problem is abstract → ask "Can you give me a specific moment where this went wrong?"
 - If the problem keeps branching into multiple different pains or user types → say "We're mixing multiple wedges together. Which single problem are we framing right now?"
+- If the problem is still hypothetical and unsupported → say "That sounds plausible, but what grounds it? Do we already know this well enough to frame, or do we need an Evidence pass first?"
 
 ### 3. Who's affected
 

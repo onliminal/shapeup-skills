@@ -6,16 +6,14 @@ Works with any [compatible agent](https://agentskills.io/home) and for solo buil
 
 ## What it does
 
-The skill walks you through four phases:
+The skill walks you through the core Shape Up phases plus optional upstream phases:
 
-1. **Frame** — Define the real problem, who it affects, and how much time it's worth (appetite)
-2. **Shape** — Find the elements of a solution at fat-marker fidelity with explicit boundaries
-3. **De-risk** — Stress-test the concept for rabbit holes, unknowns, and scope bombs
-4. **Pitch** — Synthesize everything into a decision document for the build phase
-
-And an optional upstream phase:
-
-0. **Explore** — The divergent upstream phase for product-level ideas that aren't yet a specific feature or problem. Map the problem space broadly, find the people, understand the landscape, and surface multiple candidate wedges before framing converges on one. Output: candidate problems ready for framing.
+- **Explore** *(optional)* — Diverge. Map the problem space, find the people, understand the landscape, and surface multiple candidate wedges before narrowing.
+- **Evidence** *(optional)* — Test. Run lightweight interviews, smoke tests, concierge tests, fake doors, or other cheap experiments when a promising wedge still needs real-world signal before it deserves appetite.
+- **Frame** — Define the real problem, who it affects, and how much time it's worth (appetite).
+- **Shape** — Find the elements of a solution at fat-marker fidelity with explicit boundaries.
+- **De-risk** — Stress-test the concept for rabbit holes, unknowns, and scope bombs.
+- **Pitch** — Synthesize everything into a decision document for the build phase.
 
 Each phase produces a markdown artifact in your project's `shaping/` directory. The skill tracks progress via YAML frontmatter, so you can resume across sessions.
 
@@ -77,6 +75,7 @@ The skill triggers automatically when you mention shaping, framing, pitching, ap
 
 ```
 I have a product idea I want to explore
+Help me design an evidence plan for this wedge
 Frame this problem for me
 Help me shape a solution
 De-risk this concept
@@ -97,6 +96,7 @@ shapeup-skills/                     # Plugin root
 │       ├── SKILL.md                # Entrypoint — routing logic and core behavior
 │       ├── references/
 │       │   ├── explore.md          # Explore conversation protocol
+│       │   ├── evidence.md         # Lightweight evidence / experiment protocol
 │       │   ├── frame.md            # Framing conversation protocol
 │       │   ├── shape.md            # Shaping conversation protocol
 │       │   ├── derisking.md        # De-risking conversation protocol
@@ -115,6 +115,7 @@ Artifacts are written to `shaping/{project-slug}/` in your project root:
 shaping/
 └── invoice-autopay/
     ├── explore.md              # Problem space, people, wedges (optional)
+    ├── evidence.md             # Tests, signals, and recommendation (optional)
     ├── frame.md                # Problem, appetite, success criteria
     ├── shape.md                # Elements, boundaries, flow
     ├── risks.md                # Rabbit holes, patches, cut order

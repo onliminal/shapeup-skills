@@ -36,6 +36,7 @@ shapeup-skills/                     # Plugin root
 │       ├── SKILL.md                # Entrypoint (skill definition + routing logic)
 │       ├── references/
 │       │   ├── explore.md          # Explore conversation protocol
+│       │   ├── evidence.md         # Lightweight evidence / experiment protocol
 │       │   ├── frame.md            # Framing phase conversation protocol
 │       │   ├── shape.md            # Shaping phase conversation protocol
 │       │   ├── derisking.md        # De-risking phase conversation protocol
@@ -48,12 +49,14 @@ shapeup-skills/                     # Plugin root
 
 ## How the Skill Works
 
-The skill turns the agent into a structured interviewer that guides users through four sequential phases:
+The skill turns the agent into a structured interviewer that guides users through the core Shape Up phases plus optional upstream phases:
 
-1. **Frame** — Interrogate the problem (not the solution). Push for specifics, stories, appetite.
-2. **Shape** — Collaboratively find solution elements at fat-marker fidelity. Breadboard flows, set boundaries.
-3. **De-risk** — Adversarially stress-test the concept for rabbit holes, unknowns, and scope bombs.
-4. **Pitch** — Synthesize everything into a single betting document.
+- **Explore** — Diverge across the idea space and surface candidate wedges.
+- **Evidence** — Run lightweight experiments when a promising wedge still needs real-world signal before it deserves appetite.
+- **Frame** — Interrogate the problem (not the solution). Push for specifics, stories, appetite.
+- **Shape** — Collaboratively find solution elements at fat-marker fidelity. Breadboard flows, set boundaries.
+- **De-risk** — Adversarially stress-test the concept for rabbit holes, unknowns, and scope bombs.
+- **Pitch** — Synthesize everything into a single betting document.
 
 The core behavioral rule: ask one question at a time, don't generate artifacts until the conversation is complete. The agent is an interviewer, not a document generator.
 
