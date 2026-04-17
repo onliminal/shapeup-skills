@@ -72,3 +72,15 @@ The core behavioral rule: ask one question at a time, don't generate artifacts u
 - templates/pitch.md is the only template file — it defines the output format for the final artifact.
 - SKILL.md ties everything together and should stay in sync with the reference docs if phase structure changes.
 - All file references in SKILL.md use `${CLAUDE_SKILL_DIR}` — keep this convention when adding new files.
+
+## Versioning Rules
+
+- Treat `.claude-plugin/plugin.json` as the canonical release version for the installable plugin.
+- If a change affects what an installed user gets or how the skill behaves, bump the version in `.claude-plugin/plugin.json` in the same change set.
+- Use semantic versioning:
+  - Patch (`1.0.0` -> `1.0.1`): Backward-compatible fixes or refinements to existing behavior. Examples: tightening prompts in `SKILL.md` or `references/*.md`, template improvements, metadata fixes, or other changes that improve the current workflow without expanding scope.
+  - Minor (`1.0.0` -> `1.1.0`): Backward-compatible capability additions or meaningful expansions. Examples: adding a new subskill/reference/template, expanding artifact structure, adding a new optional workflow, or materially broadening routing/phase behavior.
+  - Major (`1.0.0` -> `2.0.0`): Breaking changes that invalidate prior expectations or require migration. Examples: renaming/removing phases or artifact files, changing output conventions or frontmatter schema incompatibly, changing directory/layout expectations, or altering the methodology in a way that makes prior artifacts or instructions no longer line up.
+- Do not skip version bumps for shipped behavior changes just because the change is "only docs." In this repo, `SKILL.md`, `references/*.md`, and `templates/*.md` define product behavior.
+- Do not bump the plugin version for repo-only maintenance that does not affect installed behavior. Examples: edits limited to `AGENTS.md`, `CLAUDE.md`, CI, local tooling, or contributor notes.
+- When in doubt between patch and minor, prefer minor. When in doubt between minor and major, call out the migration risk explicitly and decide deliberately.
