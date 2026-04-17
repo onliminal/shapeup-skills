@@ -12,7 +12,7 @@ A facilitator protocol for structured product planning using the Shape Up method
 
 [Shape Up](https://basecamp.com/shapeup) (created by Ryan Singer at Basecamp) treats product development as a pipeline. This skill extends it with an optional upstream phase for early-stage product ideas:
 
-0. **Explore** *(optional)* — For product-level ideas that aren't yet a specific feature or problem. Map the problem space, find the people, understand the landscape, and identify the sharpest wedge to pursue. Output: candidate problems ready for framing.
+0. **Explore** *(optional)* — The divergent upstream phase for product-level ideas that aren't yet a specific feature or problem. Map the problem space broadly, find the people, understand the landscape, and surface multiple candidate wedges before framing converges on one. Output: candidate problems ready for framing.
 
 1. **Frame** — Challenge the raw idea. Define the real problem, who it affects, and whether the business has appetite to solve it. Output: a well-framed problem worth shaping.
 

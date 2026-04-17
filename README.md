@@ -15,7 +15,7 @@ The skill walks you through four phases:
 
 And an optional upstream phase:
 
-0. **Explore** — For product-level ideas that aren't yet a specific feature or problem. Map the problem space, find the people, understand the landscape, and identify the sharpest wedge to pursue. Output: candidate problems ready for framing.
+0. **Explore** — The divergent upstream phase for product-level ideas that aren't yet a specific feature or problem. Map the problem space broadly, find the people, understand the landscape, and surface multiple candidate wedges before framing converges on one. Output: candidate problems ready for framing.
 
 Each phase produces a markdown artifact in your project's `shaping/` directory. The skill tracks progress via YAML frontmatter, so you can resume across sessions.
 
