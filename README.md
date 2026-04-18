@@ -4,6 +4,8 @@ An [agent skill](https://agentskills.io/home) that guides you through the [Shape
 
 Works with any [compatible agent](https://agentskills.io/home) and for solo builders and teams alike.
 
+See [CHANGELOG.md](CHANGELOG.md) for versioned release notes.
+
 ## What it does
 
 The skill walks you through the core Shape Up phases plus optional upstream phases:
@@ -84,16 +86,38 @@ Write a pitch
 
 The skill detects prior work in `shaping/` and picks up where you left off.
 
+## Examples
+
+The skill now includes completed sample runs under `skills/shapeup/examples/`:
+
+- `new-product` — a full upstream-to-pitch example for a new product idea
+- `internal-tool` — a tighter feature/planning flow for an internal ops tool
+- `customer-request` — a solution-first customer request reframed into a real problem
+- `ai-workflow` — an AI/workflow concept with Explore and Evidence before Framing
+
+Each example includes:
+
+- `README.md` — what the example is meant to teach
+- `transcript.md` — an abridged sample conversation showing tone, pacing, checkpoints, and phase handoffs
+- `shaping/{project-slug}/...` — the completed artifacts from that run
+
 ## Project structure
 
 ```
 shapeup-skills/                     # Plugin root
+├── CHANGELOG.md                   # Release notes by plugin version
 ├── .claude-plugin/
 │   ├── plugin.json                 # Plugin manifest
 │   └── marketplace.json            # Marketplace catalog
 ├── skills/
 │   └── shapeup/                    # Skill directory
 │       ├── SKILL.md                # Entrypoint — routing logic and core behavior
+│       ├── examples/
+│       │   ├── README.md           # Example index and usage notes
+│       │   ├── new-product/        # Sample run: new product idea
+│       │   ├── internal-tool/      # Sample run: internal ops tool
+│       │   ├── customer-request/   # Sample run: customer request reframed
+│       │   └── ai-workflow/        # Sample run: AI/workflow concept
 │       ├── references/
 │       │   ├── explore.md          # Explore conversation protocol
 │       │   ├── evidence.md         # Lightweight evidence / experiment protocol
