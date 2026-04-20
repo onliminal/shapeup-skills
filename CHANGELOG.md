@@ -4,6 +4,13 @@ Release notes for the installable Shape Up plugin.
 
 This changelog is intentionally release-facing rather than commit-facing. It summarizes what changed for users of the skill.
 
+## [1.2.2] - 2026-04-18
+
+### Changed
+
+- Normalized artifact frontmatter values across the shipped docs, template, and examples to use capitalized human-readable values such as `status: Complete`, `status: In Progress`, and capitalized phase names.
+- Standardized the de-risking phase frontmatter value to `De-risking` so schema consumers do not need to handle mixed spellings or casing.
+
 ## [1.2.1] - 2026-04-18
 
 ### Added

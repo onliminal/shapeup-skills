@@ -154,7 +154,7 @@ Then:
    - If more testing is needed: "We have an evidence plan. Run this test, then come back and we'll decide whether to frame it."
    - If the wedge changed: "The evidence shifted the territory. Let's step back into Explore and re-map the strongest options."
 
-If the user hasn't run the test yet, mark the artifact `status: in-progress`. If the results have been reviewed and the next step is chosen, mark it `status: complete`.
+If the user hasn't run the test yet, mark the artifact `status: In Progress`. If the results have been reviewed and the next step is chosen, mark it `status: Complete`.
 
 ## Evidence -> Frame handoff test
 
@@ -183,8 +183,8 @@ If the user wants to frame without enough grounding, say:
 
 ```markdown
 ---
-status: in-progress
-phase: evidence
+status: In Progress
+phase: Evidence
 created: {date}
 updated: {date}
 ---

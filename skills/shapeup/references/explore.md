@@ -218,8 +218,8 @@ If the user has chosen a wedge but needs signal before framing, say:
 
 ```markdown
 ---
-status: complete
-phase: explore
+status: Complete
+phase: Explore
 created: {date}
 updated: {date}
 ---

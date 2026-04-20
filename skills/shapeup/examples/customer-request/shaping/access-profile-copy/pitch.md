@@ -1,6 +1,6 @@
 ---
-status: complete
-phase: pitch
+status: Complete
+phase: Pitch
 created: 2026-04-17
 updated: 2026-04-17
 appetite: 2-3 days

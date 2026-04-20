@@ -50,7 +50,7 @@ shaping/
     └── pitch.md        ← Final pitch document
 ```
 
-Each file contains YAML frontmatter with `status: in-progress | complete`. Use these to build a progress checklist at the start of each session:
+Each file contains YAML frontmatter with `status: In Progress | Complete`. Use these to build a progress checklist at the start of each session:
 
 - [ ] Explore *(optional — skip if the problem is already specific)*
 - [ ] Evidence *(optional — use when a promising wedge still needs real-world signal)*

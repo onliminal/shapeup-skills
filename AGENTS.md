@@ -72,7 +72,7 @@ The core behavioral rule: ask one question at a time, don't generate artifacts u
 - Each phase has its own reference doc with a complete conversation protocol (question flow, checkpoint patterns, failure modes)
 - SKILL.md is the entrypoint that routes to the correct phase based on prior work in `shaping/`
 - Supporting files are referenced via `${CLAUDE_SKILL_DIR}` so paths resolve regardless of install location
-- Artifacts use YAML frontmatter with `status: in-progress | complete` for resumability
+- Artifacts use YAML frontmatter with `status: In Progress | Complete` for resumability
 - Appetite scales are adjusted for agentic tooling (shorter windows, same ambition)
 - The pitch template includes a "Scope Hammer" cut order for time pressure
 
@@ -83,6 +83,7 @@ The core behavioral rule: ask one question at a time, don't generate artifacts u
 - templates/pitch.md is the only template file — it defines the output format for the final artifact.
 - SKILL.md ties everything together and should stay in sync with the reference docs if phase structure changes.
 - All file references in SKILL.md use `${CLAUDE_SKILL_DIR}` — keep this convention when adding new files.
+- Frontmatter values should use capitalized human-readable values: `status: In Progress | Complete` and `phase: Explore | Evidence | Frame | Shape | De-risking | Pitch`.
 
 ## Versioning Rules
 

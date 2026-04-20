@@ -1,6 +1,6 @@
 ---
-status: complete
-phase: pitch
+status: Complete
+phase: Pitch
 created: {date}
 updated: {date}
 appetite: {e.g., "2 weeks" or "6 weeks"}
