@@ -18,10 +18,10 @@ Copy or symlink the skill directory:
 
 ```bash
 # Personal (available across all projects)
-cp -r skills/shapeup ~/.Codex/skills/shapeup
+cp -r skills/shapeup ~/.codex/skills/shapeup
 
 # Or project-specific
-cp -r skills/shapeup .Codex/skills/shapeup
+cp -r skills/shapeup .codex/skills/shapeup
 ```
 
 ## Project Structure
@@ -29,7 +29,7 @@ cp -r skills/shapeup .Codex/skills/shapeup
 ```
 shapeup-skills/                     # Plugin root
 ├── CHANGELOG.md                   # Release notes by plugin version
-├── .Codex-plugin/
+├── .claude-plugin/
 │   ├── plugin.json                 # Plugin manifest
 │   └── marketplace.json            # Marketplace catalog
 ├── skills/
@@ -64,6 +64,13 @@ The skill turns the agent into a structured interviewer that guides users throug
 - **Shape** — Collaboratively find solution elements at fat-marker fidelity. Breadboard flows, set boundaries.
 - **De-risk** — Adversarially stress-test the concept for rabbit holes, unknowns, and scope bombs.
 - **Pitch** — Synthesize everything into a single betting document.
+
+Current shipped capabilities also include:
+
+- resumable artifacts with `Open Questions` and `Next Best Question`
+- explicit Explore/Evidence/Frame handoff rules
+- completed sample runs under `skills/shapeup/examples/`
+- versioned release notes in `CHANGELOG.md`
 
 The core behavioral rule: ask one question at a time, don't generate artifacts until the conversation is complete. The agent is an interviewer, not a document generator.
 

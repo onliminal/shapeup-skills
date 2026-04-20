@@ -19,6 +19,15 @@ The skill walks you through the core Shape Up phases plus optional upstream phas
 
 Each phase produces a markdown artifact in your project's `shaping/` directory. The skill tracks progress via YAML frontmatter, so you can resume across sessions.
 
+## Current Feature Set
+
+- **Six-phase planning flow**: optional `Explore` and `Evidence` upstream phases, followed by `Frame`, `Shape`, `De-risk`, and `Pitch`
+- **Explicit phase handoffs**: documented checks for when to stay broad, when to gather evidence, and when a problem is ready to frame
+- **Resumable artifacts**: every artifact carries frontmatter plus `Open Questions` and `Next Best Question` sections so the skill can pick up cleanly in later sessions
+- **Evidence workflow**: lightweight support for interviews, smoke tests, concierge tests, fake doors, and other cheap validation work before appetite is committed
+- **Completed example runs**: four sample projects showing tone, pacing, phase handoffs, and finished artifacts
+- **Installable plugin packaging**: plugin manifest, marketplace metadata, and versioned release notes in `CHANGELOG.md`
+
 ## Install
 
 ### Claude Code plugin (recommended)
@@ -86,6 +95,8 @@ Write a pitch
 
 The skill detects prior work in `shaping/` and picks up where you left off.
 
+When a project resumes, the skill reads the existing artifacts, surfaces unresolved questions, and by default continues with the recorded next-best question.
+
 ## Examples
 
 The skill now includes completed sample runs under `skills/shapeup/examples/`:
@@ -100,6 +111,8 @@ Each example includes:
 - `README.md` — what the example is meant to teach
 - `transcript.md` — an abridged sample conversation showing tone, pacing, checkpoints, and phase handoffs
 - `shaping/{project-slug}/...` — the completed artifacts from that run
+
+These are illustrative, not normative. The behavioral source of truth still lives in `skills/shapeup/references/`.
 
 ## Project structure
 
